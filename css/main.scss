@@ -1,0 +1,68 @@
+@import "_variables";
+@import "_mixin";
+@import "_esfera";
+
+*{
+    box-sizing: border-box;
+}
+
+/*body{
+    background: url(../img/goku.jpg) no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}*/
+.container {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .esferas-content{
+        @include on-circle($item-count: 7, $circle-size: 23em, $item-size: 6em);
+    }
+
+
+    .esfera{
+        background-color: $color-esfera;
+        border-radius: $base-tamanio-esfera/2;
+        width: $base-tamanio-esfera;
+        height: $base-tamanio-esfera;
+        padding: $base-tamanio-esfera/4;
+    }
+
+    .estrella-1{
+        @include star;
+        @include star-center(26px, 25px);
+    }
+
+    .estrella-2{
+        @include star-center(30px, 10px);
+        @include star(15px);
+    }
+
+    .estrella-3{
+        @include star-center(23px, 15px);
+        @include star(15px);
+    }
+
+    .estrella-4{
+        @include star-center(30px, 21px);
+        @include star(10px);
+    }
+
+    .estrella-5{
+        @include star-center(30px, 21px);
+        @include star(9px);
+    }
+
+    .estrella-6{
+        @include star-center(30px, 21px);
+        @include star(9px);
+    }
+
+    .estrella-7{
+        @include star-center(30px, 21px);
+        @include star(9px);
+    }
+}
